@@ -7,10 +7,12 @@
 > 启动设置：悬浮按钮(默认开启) or 三指双击
 
 ## 2. AutoSkip 开屏自动跳过
--- app开启15秒内识别生效，超过时间不再识别
+- app开启15秒内识别生效，超过时间不再识别
 
 ![效果](img/autoskip_demo.gif)
 
 ## 3. AutoHelper JavaScript控制
--- [JavaScript开发说明文档](AutoHelper/JavaScript_Guide.md)
--- [麦当劳JavaScript示例](AutoHelper/demo_McDonald.js)
+- [JavaScript开发说明文档](AutoHelper/JavaScript_Guide.md)
+- [麦当劳JavaScript示例](AutoHelper/demo_McDonald.js)
+
+> ps: 我只想订个麦当劳
