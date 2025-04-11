@@ -14,6 +14,10 @@ var g_swipeFindCount = 0;          // 当前滑动次数
 var g_swipeFindText = "";          // 要查找的文本
 var g_swipeFindMaxCount = 10;      // 最大滑动次数
 var g_swipeFindOk = false;         // 标记是否找到
+var g_swipeStartX = 0;             // 滑动起始 X
+var g_swipeStartY = 0;             // 滑动起始 Y
+var g_swipeEndX = 0;               // 滑动结束 X
+var g_swipeEndY = 0;               // 滑动结束 Y
 var g_isSwipeFindRunning = false;  // 标记查找函数是否正在运行，防止重入
 
 // --- 辅助函数 (新) ---
@@ -113,9 +117,9 @@ function findProdTap(text) {
     // --- 计算滑动坐标 ---
     var screenWidth = iOS.getScreenWidth();
     var screenHeight = iOS.getScreenHeight();
-    var g_swipeStartX = screenWidth / 2,
-    g_swipeStartY = screenHeight / 10 * 8,
-    g_swipeEndX = screenWidth / 2,
+    g_swipeStartX = screenWidth / 2;
+    g_swipeStartY = screenHeight / 10 * 8;
+    g_swipeEndX = screenWidth / 2;
     g_swipeEndY = screenHeight / 10 * 7; // Y 减小，是向上滑动
 
     // --- 执行第一次查找 ---
@@ -209,11 +213,9 @@ function runAutomation() {
 
         findElementAndTap("加入购物车")
 
-        iOS.sleep(2)
-        
-        findElementAndTap("去结算")
-        
         iOS.sleep(1)
+
+        findElementAndTap("去结算")
 
         findElementAndTap("外带")
         
