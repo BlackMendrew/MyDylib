@@ -10,3 +10,7 @@
 -- app开启15秒内识别生效，超过时间不再识别
 
 ![效果](img/autoskip_demo.gif)
+
+## 3. AutoHelper JavaScript控制
+-- [JavaScript开发说明文档](AutoHelper/JavaScript_Guide.md)
+-- [麦当劳JavaScript示例](AutoHelper/demo_McDonald.js)
