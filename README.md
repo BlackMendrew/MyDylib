@@ -14,5 +14,8 @@
 ## 3. AutoHelper JavaScript控制
 - [JavaScript开发说明文档](AutoHelper/JavaScript_Guide.md)
 - [麦当劳JavaScript示例](AutoHelper/demo_McDonald.js)
+### 更新记录
+- 1.0.1:
+    新增设置：隐藏悬浮按钮，查看日志，屏幕常亮
 
 > ps: 我只想订个麦当劳

@@ -225,9 +225,8 @@ function runAutomation() {
     }
 
 
-    // ... (其他注释掉的代码) ...
-
-    iOS.log("自动化脚本执行完毕。");
+    iOS.log("调用 iOS.scriptDidComplete() 通知原生脚本结束。");
+    iOS.scriptDidComplete();
 }
 
 // --- 脚本入口 ---
