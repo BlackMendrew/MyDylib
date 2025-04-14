@@ -13,8 +13,6 @@
 #### 1. `iOS.tap(x, y)`
 
 *   **描述:** 在屏幕的指定绝对坐标 (x, y) 处模拟一次点击（按下并抬起）。
-*   **优化:** 此函数会尝试优化点击。它首先使用 `hitTest` 查找坐标点下的最前端视图，并向上查找第一个可见且启用的 `UIControl`。如果找到，则优先尝试向该控件发送 `TouchUpInside` 事件（这比模拟坐标更可靠）。只有在找不到合适的 `UIControl` 时，才会回退到使用 `PTFakeTouch` 在指定坐标进行底层触摸模拟。
-*   **参数:**
     *   `x` (Number): 点击位置的 X 坐标（屏幕坐标系，单位：点）。
     *   `y` (Number): 点击位置的 Y 坐标（屏幕坐标系，单位：点）。
 *   **返回:** `void`
@@ -112,12 +110,6 @@
 #### 5. `iOS.tapElement(elementId)`
 
 *   **描述:** 模拟点击与指定 `elementId` 关联的元素。**这是推荐的点击元素的方式。**
-*   **内部逻辑:**
-    1.  查找 `elementId` 对应的原生对象（`UIControl`, `UIView`, 或 OCR 的 `NSValue`）。
-    2.  **实时计算**该元素的**当前**屏幕 Frame。
-    3.  显示点击高亮。
-    4.  **优化：** 如果元素是 `UIControl`，优先尝试调用 `sendActionsForControlEvents:UIControlEventTouchUpInside` 来触发其动作（最可靠）。
-    5.  **回退：** 如果不是 `UIControl`，或者发送事件异常，则计算 Frame 的中心点，并调用（已优化的）`iOS.tap(centerX, centerY)`。`iOS.tap` 内部会先尝试 `hitTest` 查找并发送事件，最后才使用 `PTFakeTouch` 模拟坐标点击。
 *   **参数:**
     *   `elementId` (Number): 由**当前** `iOS.findElements` 调用返回的元素 ID。
 *   **返回:** `void`
