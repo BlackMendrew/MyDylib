@@ -13,6 +13,8 @@
     提高兼容性，避免闪退
 - 1.0.3:
     支持热切换出现的广告
+- 1.0.4:
+    Touch组件与autohelper区分
 
 ![效果](img/autoskip_demo.gif)
 
