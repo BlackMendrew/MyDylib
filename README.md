@@ -12,11 +12,10 @@
 - 1.0.2:
     提高兼容性，避免闪退
 - 1.0.3:
-    支持热切换出现的广告
+    支持热切换出现跳过
 - 1.0.4:
     Touch组件与autohelper区分
 
-![效果](img/autoskip_demo.gif)
 
 ## 3. AutoHelper JavaScript控制
 - [JavaScript开发说明文档](AutoHelper/JavaScript_Guide.md)
